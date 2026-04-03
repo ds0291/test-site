@@ -34,7 +34,7 @@
     }
 
     .hero-content {
-      max-width: 980px;
+      max-width: 800px;
       text-align: center;
       opacity: 0;
       animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
@@ -52,11 +52,11 @@
     }
 
     h1 {
-      font-size: clamp(48px, 8vw, 96px);
-      font-weight: 600;
-      letter-spacing: -0.015em;
+      font-size: clamp(56px, 10vw, 120px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
       line-height: 1.05;
-      margin-bottom: 16px;
+      margin-bottom: 24px;
       background: linear-gradient(180deg, #ffffff 0%, #a0a0a0 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -64,218 +64,20 @@
     }
 
     .tagline {
-      font-size: clamp(21px, 2.5vw, 28px);
+      font-size: clamp(18px, 2.5vw, 24px);
       font-weight: 400;
-      line-height: 1.4;
+      line-height: 1.5;
       color: #a1a1a6;
-      margin-bottom: 64px;
+      margin-bottom: 48px;
       letter-spacing: 0.007em;
     }
 
-    .framework-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 0;
-      opacity: 0;
-      animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
-    }
-
-    .letter-card {
-      aspect-ratio: 1;
-      background: rgba(255, 255, 255, 0.04);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 24px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      padding: 24px;
-      cursor: pointer;
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .letter-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
-      opacity: 0;
-      transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .letter {
-      font-size: clamp(40px, 5vw, 56px);
-      font-weight: 600;
-      color: #ffffff;
-      position: relative;
-      z-index: 1;
-    }
-
-    .label {
-      font-size: 12px;
-      font-weight: 500;
-      color: #a1a1a6;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .letter-card:hover {
-      transform: scale(1.05) translateY(-8px);
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(255, 255, 255, 0.2);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-    }
-
-    .letter-card:hover::before {
-      opacity: 1;
-    }
-
-    .letter-card:active {
-      transform: scale(0.98) translateY(-4px);
-    }
-
-    .pillars-section {
-      padding: 120px 24px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .section-title {
-      font-size: clamp(36px, 5vw, 56px);
-      font-weight: 600;
-      letter-spacing: -0.015em;
-      margin-bottom: 80px;
-      text-align: center;
-    }
-
-    .pillars-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
-      margin-bottom: 80px;
-    }
-
-    .pillar {
-      opacity: 0;
-      animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    }
-
-    .pillar:nth-child(1) { animation-delay: 0.2s; }
-    .pillar:nth-child(2) { animation-delay: 0.4s; }
-    .pillar:nth-child(3) { animation-delay: 0.6s; }
-    .pillar:nth-child(4) { animation-delay: 0.8s; }
-    .pillar:nth-child(5) { animation-delay: 1s; }
-
-    .pillar-header {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 24px;
-    }
-
-    .pillar-letter {
-      font-size: 32px;
-      font-weight: 700;
-      color: #ffffff;
-      width: 56px;
-      height: 56px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 12px;
-    }
-
-    .pillar-name {
-      font-size: 20px;
-      font-weight: 600;
-      color: #ffffff;
-      letter-spacing: -0.013em;
-    }
-
-    .pillar-description {
-      font-size: 16px;
-      line-height: 1.6;
-      color: #a1a1a6;
-      font-weight: 400;
-      letter-spacing: -0.022em;
-    }
-
-    .scored-section {
-      padding: 80px 24px;
-      background: rgba(255, 255, 255, 0.02);
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .scored-container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .scored-title {
-      font-size: clamp(36px, 5vw, 56px);
-      font-weight: 600;
-      letter-spacing: -0.015em;
-      margin-bottom: 16px;
-      text-align: center;
-    }
-
-    .scored-subtitle {
+    .intro-text {
       font-size: 18px;
-      color: #a1a1a6;
-      text-align: center;
-      margin-bottom: 60px;
-      line-height: 1.5;
-    }
-
-    .scored-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 32px;
-    }
-
-    .scored-item {
-      opacity: 0;
-      animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    }
-
-    .scored-item:nth-child(1) { animation-delay: 0.1s; }
-    .scored-item:nth-child(2) { animation-delay: 0.2s; }
-    .scored-item:nth-child(3) { animation-delay: 0.3s; }
-    .scored-item:nth-child(4) { animation-delay: 0.4s; }
-    .scored-item:nth-child(5) { animation-delay: 0.5s; }
-
-    .scored-letter {
-      font-size: 40px;
-      font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 12px;
-    }
-
-    .scored-name {
-      font-size: 18px;
-      font-weight: 600;
-      color: #ffffff;
-      margin-bottom: 8px;
-      letter-spacing: -0.013em;
-    }
-
-    .scored-description {
-      font-size: 14px;
-      line-height: 1.6;
+      line-height: 1.7;
       color: #86868b;
       font-weight: 400;
+      margin-bottom: 0;
       letter-spacing: -0.022em;
     }
 
@@ -321,55 +123,210 @@
       }
     }
 
+    .section {
+      padding: 100px 24px;
+      position: relative;
+    }
+
+    .section-container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 60px;
+      text-align: center;
+      opacity: 0;
+      animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+    }
+
+    .pillars-container {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    .pillar-item {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 48px;
+      align-items: start;
+      opacity: 0;
+      animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .pillar-item:nth-child(1) { animation-delay: 0.3s; }
+    .pillar-item:nth-child(2) { animation-delay: 0.45s; }
+    .pillar-item:nth-child(3) { animation-delay: 0.6s; }
+    .pillar-item:nth-child(4) { animation-delay: 0.75s; }
+    .pillar-item:nth-child(5) { animation-delay: 0.9s; }
+
+    .pillar-icon {
+      font-size: 72px;
+      font-weight: 700;
+      color: #ffffff;
+      opacity: 0.1;
+      line-height: 1;
+    }
+
+    .pillar-content h3 {
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      margin-bottom: 16px;
+      color: #ffffff;
+    }
+
+    .pillar-content p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #a1a1a6;
+      font-weight: 400;
+      letter-spacing: -0.022em;
+    }
+
+    .scored-section {
+      padding: 100px 24px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.01) 100%);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .scored-container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .scored-title {
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+      text-align: center;
+      opacity: 0;
+      animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+    }
+
+    .scored-subtitle {
+      font-size: 18px;
+      color: #a1a1a6;
+      text-align: center;
+      margin-bottom: 64px;
+      line-height: 1.6;
+      opacity: 0;
+      animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards;
+    }
+
+    .scored-items {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    .scored-item {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 40px;
+      align-items: start;
+      opacity: 0;
+      animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .scored-item:nth-child(1) { animation-delay: 0.5s; }
+    .scored-item:nth-child(2) { animation-delay: 0.65s; }
+    .scored-item:nth-child(3) { animation-delay: 0.8s; }
+    .scored-item:nth-child(4) { animation-delay: 0.95s; }
+    .scored-item:nth-child(5) { animation-delay: 1.1s; }
+
+    .scored-letter {
+      font-size: 64px;
+      font-weight: 700;
+      color: #ffffff;
+      opacity: 0.08;
+      line-height: 1;
+    }
+
+    .scored-content h4 {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+
+    .scored-content p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #86868b;
+      font-weight: 400;
+      letter-spacing: -0.022em;
+    }
+
+    .closing-section {
+      padding: 100px 24px;
+      text-align: center;
+      background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    }
+
+    .closing-container {
+      max-width: 800px;
+      margin: 0 auto;
+      opacity: 0;
+      animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+    }
+
+    .closing-title {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      margin-bottom: 24px;
+      color: #ffffff;
+    }
+
+    .closing-text {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #a1a1a6;
+      font-weight: 400;
+      letter-spacing: -0.022em;
+    }
+
     @media (max-width: 768px) {
-      .framework-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
-        padding: 32px 0;
+      .pillar-item,
+      .scored-item {
+        grid-template-columns: 1fr;
+        gap: 24px;
       }
 
-      .letter-card {
-        gap: 8px;
-        padding: 16px;
+      .pillar-icon,
+      .scored-letter {
+        font-size: 48px;
+        opacity: 0.05;
       }
 
-      .letter {
-        font-size: 32px;
-      }
-
-      .label {
-        font-size: 10px;
-      }
-
-      .hero-section {
-        padding: 32px 20px;
-      }
-
-      .pillars-grid {
-        gap: 32px;
-      }
-
-      .pillars-section {
+      .section,
+      .scored-section,
+      .closing-section {
         padding: 80px 20px;
       }
 
-      .scored-section {
-        padding: 60px 20px;
+      .section-title,
+      .scored-title {
+        margin-bottom: 40px;
+        font-size: 32px;
       }
 
-      .scored-grid {
-        gap: 24px;
+      .pillars-container,
+      .scored-items {
+        gap: 40px;
       }
     }
 
     @media (max-width: 480px) {
-      .letter-card {
-        font-size: 28px;
-        border-radius: 16px;
-      }
-
-      .framework-grid {
-        gap: 12px;
+      h1 {
+        font-size: 42px;
       }
 
       .section-title,
@@ -377,10 +334,14 @@
         font-size: 28px;
       }
 
-      .pillar-letter {
-        width: 48px;
-        height: 48px;
-        font-size: 24px;
+      .pillar-content h3,
+      .scored-content h4 {
+        font-size: 20px;
+      }
+
+      .pillar-content p,
+      .scored-content p {
+        font-size: 15px;
       }
     }
   </style>
@@ -396,130 +357,111 @@
   <div class="hero-content">
     <h1>WE5SCORED</h1>
     <p class="tagline">Pioneering operational excellence through collective action.</p>
-
-    <div class="framework-grid">
-      <div class="letter-card">
-        <div class="letter">W</div>
-        <div class="label">We</div>
-      </div>
-      <div class="letter-card">
-        <div class="letter">E</div>
-        <div class="label">Equity</div>
-      </div>
-      <div class="letter-card">
-        <div class="letter">5</div>
-        <div class="label">Five E's</div>
-      </div>
-      <div class="letter-card">
-        <div class="letter">S</div>
-        <div class="label">Safety</div>
-      </div>
-      <div class="letter-card">
-        <div class="letter">C</div>
-        <div class="label">Compliance</div>
-      </div>
-      <div class="letter-card">
-        <div class="letter">O</div>
-        <div class="label">Operations</div>
-      </div>
-      <div class="letter-card">
-        <div class="letter">R</div>
-        <div class="label">Reliability</div>
-      </div>
-      <div class="letter-card">
-        <div class="letter">E</div>
-        <div class="label">Excellence</div>
-      </div>
-      <div class="letter-card">
-        <div class="letter">D</div>
-        <div class="label">Data-Driven</div>
-      </div>
-    </div>
+    <p class="intro-text">A philosophy framework designed to guide organizations toward achieving their goals while prioritizing fairness, empowerment, continuous improvement, environmental sustainability, and economic viability.</p>
   </div>
 </div>
 
-<section class="pillars-section">
-  <h2 class="section-title">The Five Pillars</h2>
+<section class="section">
+  <div class="section-container">
+    <h2 class="section-title">The Foundation</h2>
 
-  <div class="pillars-grid">
-    <div class="pillar">
-      <div class="pillar-header">
-        <div class="pillar-letter">W</div>
-        <div class="pillar-name">We Collective Action</div>
+    <div class="pillars-container">
+      <div class="pillar-item">
+        <div class="pillar-icon">W</div>
+        <div class="pillar-content">
+          <h3>We: Collective Action</h3>
+          <p>At the core lies the principle of collective action towards a unified goal. This represents the foundational belief that great achievements come through coordinated effort and shared purpose across all levels of the organization.</p>
+        </div>
       </div>
-      <p class="pillar-description">At the core lies the principle of collective action towards a unified goal.</p>
-    </div>
 
-    <div class="pillar">
-      <div class="pillar-header">
-        <div class="pillar-letter">E</div>
-        <div class="pillar-name">Equitability</div>
+      <div class="pillar-item">
+        <div class="pillar-icon">E</div>
+        <div class="pillar-content">
+          <h3>Equitability</h3>
+          <p>Fostering fairness and equality across all operations and stakeholders. Equitability ensures that every voice is heard, every perspective valued, and opportunities are distributed justly throughout the organization.</p>
+        </div>
       </div>
-      <p class="pillar-description">Fostering fairness and equality across all operations and stakeholders.</p>
-    </div>
 
-    <div class="pillar">
-      <div class="pillar-header">
-        <div class="pillar-letter">E</div>
-        <div class="pillar-name">Empowerment</div>
+      <div class="pillar-item">
+        <div class="pillar-icon">E</div>
+        <div class="pillar-content">
+          <h3>Empowerment</h3>
+          <p>Enabling informed decision-making and skill development for confident, responsible action. When people are empowered with knowledge and trust, they become agents of positive change and operational excellence.</p>
+        </div>
       </div>
-      <p class="pillar-description">Enabling informed decision-making and skill development for confident, responsible action.</p>
-    </div>
 
-    <div class="pillar">
-      <div class="pillar-header">
-        <div class="pillar-letter">E</div>
-        <div class="pillar-name">Excellence</div>
+      <div class="pillar-item">
+        <div class="pillar-icon">E</div>
+        <div class="pillar-content">
+          <h3>Excellence</h3>
+          <p>Instilling a mindset of continuous improvement and surpassing benchmarks for exceptional value delivery. Excellence is not a destination but a commitment to perpetually elevate standards and exceed expectations.</p>
+        </div>
       </div>
-      <p class="pillar-description">Instilling a mindset of continuous improvement and surpassing benchmarks.</p>
-    </div>
 
-    <div class="pillar">
-      <div class="pillar-header">
-        <div class="pillar-letter">E</div>
-        <div class="pillar-name">Environment & Economics</div>
+      <div class="pillar-item">
+        <div class="pillar-icon">E</div>
+        <div class="pillar-content">
+          <h3>Environment & Economics</h3>
+          <p>Prioritizing environmental sustainability and economic viability to safeguard long-term value creation. Both environmental responsibility and financial health are essential to ensuring lasting success and meaningful impact.</p>
+        </div>
       </div>
-      <p class="pillar-description">Prioritizing sustainability and economic viability for long-term value creation.</p>
     </div>
   </div>
 </section>
 
 <section class="scored-section">
   <div class="scored-container">
-    <h2 class="scored-title">SCORED Framework</h2>
-    <p class="scored-subtitle">A structured assessment framework for continuous excellence in all operations</p>
+    <h2 class="scored-title">SCORED Assessment Framework</h2>
+    <p class="scored-subtitle">A structured evaluation system for measuring and achieving excellence in all operations</p>
 
-    <div class="scored-grid">
+    <div class="scored-items">
       <div class="scored-item">
         <div class="scored-letter">S</div>
-        <div class="scored-name">Safety</div>
-        <p class="scored-description">Prioritizing workforce and operational safety in all endeavors.</p>
+        <div class="scored-content">
+          <h4>Safety</h4>
+          <p>Prioritizing workforce and operational safety in all endeavors. Safety is foundational—protecting people and assets enables everything else.</p>
+        </div>
       </div>
 
       <div class="scored-item">
         <div class="scored-letter">C</div>
-        <div class="scored-name">Compliance</div>
-        <p class="scored-description">Adhering to all regulatory requirements and standards.</p>
+        <div class="scored-content">
+          <h4>Compliance</h4>
+          <p>Adhering to all regulatory requirements and standards. Strong compliance practices build trust and ensure sustainable, responsible operations.</p>
+        </div>
       </div>
 
       <div class="scored-item">
         <div class="scored-letter">O</div>
-        <div class="scored-name">Operating Discipline</div>
-        <p class="scored-description">Maintaining consistent processes and operational excellence.</p>
+        <div class="scored-content">
+          <h4>Operating Discipline</h4>
+          <p>Maintaining consistent processes and operational excellence. Discipline in execution transforms strategy into tangible results and measurable outcomes.</p>
+        </div>
       </div>
 
       <div class="scored-item">
         <div class="scored-letter">R</div>
-        <div class="scored-name">Reliability</div>
-        <p class="scored-description">Ensuring dependable and consistent performance outcomes.</p>
+        <div class="scored-content">
+          <h4>Reliability</h4>
+          <p>Ensuring dependable and consistent performance outcomes. Reliability builds confidence with stakeholders and creates a foundation for growth.</p>
+        </div>
       </div>
 
       <div class="scored-item">
         <div class="scored-letter">D</div>
-        <div class="scored-name">Data-Driven Decisions</div>
-        <p class="scored-description">Leveraging analytics and insights for informed strategic choices.</p>
+        <div class="scored-content">
+          <h4>Data-Driven Decisions</h4>
+          <p>Leveraging analytics and insights for informed strategic choices. Data transforms uncertainty into clarity, enabling better decisions at every level.</p>
+        </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="closing-section">
+  <div class="closing-container">
+    <h2 class="closing-title">Continuous Improvement</h2>
+    <p class="closing-text">WE5SCORED is more than a framework—it's a commitment to raising the bar continuously and striving for excellence in every facet of operations. By integrating these five pillars with the SCORED assessment system, organizations empower themselves to create lasting value, foster sustainable growth, and build operations that endure.</p>
   </div>
 </section>
 
