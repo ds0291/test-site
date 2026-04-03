@@ -9,6 +9,26 @@
       font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
       background: #ffffff;
       color: #1d1d1f;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: rgba(255,255,255,0.8);
+      backdrop-filter: blur(10px);
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      box-sizing: border-box;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #1d1d1f;
+      font-size: 14px;
     }
 
     .container {
@@ -18,9 +38,7 @@
     }
 
     h1 {
-      font-size: 72px;
-      font-weight: 600;
-      letter-spacing: -1.5px;
+      font-size: 64px;
       margin: 0;
       line-height: 1.05;
     }
@@ -28,149 +46,109 @@
     .subtext {
       font-size: 22px;
       color: #6e6e73;
-      margin-top: 28px;
-      max-width: 640px;
-      line-height: 1.5;
-    }
-
-    .proof {
       margin-top: 24px;
-      font-size: 15px;
-      color: #86868b;
-    }
-
-    .cta {
-      margin-top: 40px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 14px 28px;
-      border-radius: 30px;
-      background: #0071e3;
-      color: white;
-      text-decoration: none;
-      font-size: 16px;
-      transition: all 0.2s ease;
-    }
-
-    .btn:hover {
-      background: #005bb5;
-      transform: scale(1.03);
-    }
-
-    .divider {
-      height: 1px;
-      background: #e5e5e7;
-      margin-top: 120px;
+      max-width: 600px;
     }
 
     .section {
-      margin-top: 120px;
-      max-width: 640px;
+      margin-top: 140px;
     }
 
     .section h2 {
       font-size: 30px;
-      font-weight: 600;
       margin-bottom: 12px;
     }
 
     .section p {
       font-size: 18px;
       color: #424245;
+      max-width: 640px;
       line-height: 1.6;
     }
 
-    .statement {
-      margin-top: 140px;
-      font-size: 40px;
-      font-weight: 600;
-      line-height: 1.2;
-      letter-spacing: -0.5px;
-      max-width: 720px;
+    .cards {
+      margin-top: 30px;
     }
 
-    .fade {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: all 0.8s ease;
+    .card {
+      border-bottom: 1px solid #e5e5e7;
+      padding: 20px 0;
     }
 
-    .fade.visible {
-      opacity: 1;
-      transform: translateY(0);
+    .btn {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 24px;
+      background: #0071e3;
+      color: white;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
 
+<nav>
+  <div><strong>Deepak</strong></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#thinking">Thinking</a>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
 <div class="container">
 
+  <!-- HOME -->
   <h1>Clarity, first.</h1>
   <h1>Everything else follows.</h1>
 
   <p class="subtext">
-    I work with founders and leaders to cut through noise, make better decisions, 
-    and execute with intent.
+    I work with founders and leaders to think better, decide faster, and execute with intent.
   </p>
 
-  <p class="proof">
-    Built and scaled businesses to $75M. Led $100M capital raises. 20+ years across industries.
-  </p>
+  <!-- ABOUT -->
+  <div id="about" class="section">
+    <h2>About</h2>
+    <p>
+      20+ years building and scaling businesses across industries.  
+      Scaled operations to $75M. Led $100M capital raises.  
+      Now focused on helping leaders navigate complexity with clarity and execution.
+    </p>
+  </div>
 
-  <div class="cta">
+  <!-- THINKING -->
+  <div id="thinking" class="section">
+    <h2>Thinking</h2>
+    <div class="cards">
+      <div class="card">
+        <strong>Most people don’t have a strategy problem</strong>
+        <p>They have a clarity problem.</p>
+      </div>
+      <div class="card">
+        <strong>Execution breaks where thinking is weak</strong>
+        <p>Clarity is the multiplier.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORK -->
+  <div id="work" class="section">
+    <h2>Work With Me</h2>
+    <p>
+      1:1 coaching for founders and leaders navigating growth, decisions, or transitions.
+    </p>
     <a href="mailto:your@email.com" class="btn">Start a conversation</a>
   </div>
 
-  <div class="divider"></div>
-
-  <div class="statement fade">
-    Most people don’t have a strategy problem.  
-    They have a clarity problem.
-  </div>
-
-  <div class="section fade">
-    <h2>What this is</h2>
-    <p>
-      Not generic coaching.  
-      We diagnose what’s actually going on, challenge assumptions, 
-      and move quickly to what matters.
-    </p>
-  </div>
-
-  <div class="section fade">
-    <h2>Who this is for</h2>
-    <p>
-      Founders, operators, and leaders at inflection points.  
-      If you want comfort, this won’t work.  
-      If you want clarity and progress, it will.
-    </p>
-  </div>
-
-  <div class="section fade">
-    <h2>How we work</h2>
-    <p>
-      Direct conversations. Structured thinking. Clear outcomes.  
-      Every session ends with decisions you can act on.
-    </p>
+  <!-- CONTACT -->
+  <div id="contact" class="section">
+    <h2>Contact</h2>
+    <p>your@email.com</p>
   </div>
 
 </div>
-
-<script>
-  const faders = document.querySelectorAll('.fade');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  });
-
-  faders.forEach(el => observer.observe(el));
-</script>
 
 </body>
 </html>
