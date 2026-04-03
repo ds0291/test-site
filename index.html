@@ -1,43 +1,88 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Deepak | Leadership & Performance Coach</title>
+  <title>Deepak | Think Better</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #0f172a;
-      color: white;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+      background: #ffffff;
+      color: #1d1d1f;
     }
+
     .container {
       max-width: 900px;
       margin: auto;
-      padding: 60px 20px;
+      padding: 100px 20px;
     }
+
     h1 {
-      font-size: 42px;
+      font-size: 64px;
+      font-weight: 600;
+      letter-spacing: -1px;
+      margin: 0;
+    }
+
+    .subtext {
+      font-size: 22px;
+      color: #6e6e73;
+      margin-top: 20px;
+      max-width: 600px;
+    }
+
+    .section {
+      margin-top: 120px;
+    }
+
+    .section h2 {
+      font-size: 28px;
+      font-weight: 600;
       margin-bottom: 10px;
     }
-    h2 {
-      margin-top: 40px;
-      font-size: 24px;
-    }
-    p {
-      color: #cbd5f5;
+
+    .section p {
+      font-size: 18px;
+      color: #424245;
+      max-width: 600px;
       line-height: 1.6;
     }
+
     .cta {
-      margin-top: 30px;
+      margin-top: 40px;
     }
+
     .btn {
-      padding: 12px 24px;
-      background: #3b82f6;
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 30px;
+      background: #0071e3;
       color: white;
       text-decoration: none;
-      border-radius: 6px;
+      font-size: 16px;
+      transition: all 0.2s ease;
     }
-    .section {
-      margin-top: 50px;
+
+    .btn:hover {
+      background: #005bb5;
+      transform: scale(1.03);
+    }
+
+    .divider {
+      height: 1px;
+      background: #e5e5e7;
+      margin-top: 120px;
+    }
+
+    .fade {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease;
+    }
+
+    .fade.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
@@ -45,35 +90,62 @@
 
 <div class="container">
 
-  <h1>Deepak</h1>
-  <p>Leadership & Performance Coach</p>
+  <h1>Think better.</h1>
+  <h1>Execute sharper.</h1>
 
-  <div class="section">
-    <h2>What I Do</h2>
-    <p>I work with founders and leaders to bring clarity, sharpen decision-making, and drive execution. 
-    The focus is simple: better thinking, stronger actions, measurable outcomes.</p>
+  <p class="subtext">
+    I work with founders and leaders who want clarity, not noise.  
+    Better decisions. Stronger execution. Real outcomes.
+  </p>
+
+  <div class="cta">
+    <a href="mailto:your@email.com" class="btn">Start a conversation</a>
   </div>
 
-  <div class="section">
-    <h2>Who I Work With</h2>
-    <p>Operators, founders, and senior professionals navigating growth, complexity, or transition.</p>
+  <div class="divider"></div>
+
+  <div class="section fade">
+    <h2>What this is</h2>
+    <p>
+      Not coaching for the sake of it.  
+      We break down what’s actually happening, challenge assumptions,  
+      and move fast to what matters.
+    </p>
   </div>
 
-  <div class="section">
-    <h2>How I Work</h2>
-    <p>Direct conversations. No fluff. Structured thinking. 
-    We diagnose, challenge assumptions, and move to action quickly.</p>
+  <div class="section fade">
+    <h2>Who this is for</h2>
+    <p>
+      Builders. Operators. Leaders at inflection points.  
+      If you’re looking for comfort, this isn’t it.
+    </p>
   </div>
 
-  <div class="section">
-    <h2>Work With Me</h2>
-    <p>If you’re looking to think sharper and execute better, let’s talk.</p>
-    <div class="cta">
-      <a href="mailto:your@email.com" class="btn">Book a Conversation</a>
-    </div>
+  <div class="section fade">
+    <h2>How it works</h2>
+    <p>
+      Clear thinking. Direct conversations.  
+      Every session ends with direction you can act on.
+    </p>
   </div>
 
 </div>
+
+<script>
+  const faders = document.querySelectorAll('.fade');
+
+  const appearOnScroll = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
 
 </body>
 </html>
